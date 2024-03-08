@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product>
+  <food>
+    <foodCode>1</foodCode>
+    <name>Steak</name>
+    <category>M</category>
+    <price>900</price>
+    <imageID>1</imageID>
+  </food>
+  <food>
+    <foodCode>2</foodCode>
+    <name>Salmon</name>
+    <category>M</category>
+    <price>850</price>
+    <imageID>2</imageID>
+  </food>
+  <food>
+    <foodCode>3</foodCode>
+    <name>Chicken</name>
+    <category>M</category>
+    <price>300</price>
+    <imageID>3</imageID>
+  </food>
+  <food>
+    <foodCode>4</foodCode>
+    <name>Baked Potato</name>
+    <category>S</category>
+    <price>80</price>
+    <imageID>4</imageID>
+  </food>
+  <food>
+    <foodCode>5</foodCode>
+    <name>Mashed Potato</name>
+    <category>S</category>
+    <price>75</price>
+    <imageID>5</imageID>
+  </food>
+  <food>
+    <foodCode>6</foodCode>
+    <name>Steamed Vegetables</name>
+    <category>S</category>
+    <price>50</price>
+    <imageID>6</imageID>
+  </food>
+  <food>
+    <foodCode>7</foodCode>
+    <name>Ice Tea</name>
+    <category>D</category>
+    <price>55</price>
+    <imageID>7</imageID>
+  </food>
+  <food>
+    <foodCode>8</foodCode>
+    <name>Root Beer</name>
+    <category>D</category>
+    <price>60</price>
+    <imageID>8</imageID>
+  </food>
+  <food>
+    <foodCode>9</foodCode>
+    <name>Water</name>
+    <category>D</category>
+    <price>20</price>
+    <imageID>9</imageID>
+  </food>
+</product>

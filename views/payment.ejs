@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bite-By-Bytes </title>
+
+    <script>
+        function test(event) {
+            event.preventDefault();
+            console.log()
+        }
+    </script>
+    
+</head>
+    <link rel="stylesheet" href="style2.css">
+<body>
+    <form method="post" action="/receipt">
+      <div class="container">
+        <header> 
+            <img class="logo" src="logo.svg" alt="logo" height="80">
+            <h1 style="color: white; text-align: center;"> &nbsp; Bite-By-Bytes </h1>
+        </header>
+    <br>
+
+    <div class ="orderList">
+      <h1 style="color: #F16D20"> Order Summary </h1>
+        <br>
+        <table class ="productTable">
+          <thead>
+            <tr>
+              <th style="color: #000000"> Product </th>
+              <th style="color: #000000"> Price </th>
+              <th style="color: #000000"> Quantity </th>
+            </tr>
+          </thead>
+            <tr>
+              <% for (let i = 0; i < listProduct.length; i++) { %>
+                  <tr>
+                      <td><%- listProduct[i] %></td>
+                      <td><%- listPrice[i] %></td>
+                      <td><%- listQuantity[i] %></td>
+                <input type="hidden" name="product" value="<%- listProduct[i] %>">
+                <input type="hidden" name="price" value="<%- listPrice[i] %>">
+                <input type="hidden" name="quantity" value="<%- listQuantity[i] %>">
+            </tr>
+          <% } %>
+          <input type="hidden" name="foodCode" value="<%- foodCode %>">
+
+              </tr> 
+          </table>	  
+              <div class="productList" id="productList"></div>
+              <br>
+              <div class="total" id="total">Total: <%- total %></div>
+              <input type="hidden" value="<%- total %>" name="total"> 
+              <input type="hidden" value="<%- hasCombo %>" name="hasCombo"> 
+              <input type="hidden" value="<%- discountPrice %>" name="discountPrice">
+              <input type="hidden" value="<%- totalindividualOrders %>" name="totalindividualOrders">
+              <input type="hidden" value="<%- comboTotal %>" name="comboTotal">
+              <input type="hidden" value="<%- updatedQuantity %>" name="updatedQuantity">
+              <% if(hasCombo) {%>
+              <div class="totalDiscounted" id="totalDiscounted">Total Discounted: <%- totalDiscounted %></div> 
+              <input type="hidden" value="<%- totalDiscounted %>" name="totalDiscounted">
+              <div class="comboName" id="comboName">Combo Name: <%- comboName %></div> 
+              <input type="hidden" value="<%- comboName %>" name="comboName">
+              <% } %>
+    </div>
+    
+    <div class="userInput">
+      <h1 style="color: #F16D20"> Payment Details </h1>
+      <br>
+        <div class="name">
+            <h3 style="color: black"> Name: &nbsp; </h3>
+            <div class="input-field>"> <input type="text" name="customer" id="customer" size="25" required> </div>
+        </div>
+      <br>
+        <div class="cashAmount">
+            <h3 style="color: black"> Cash Amount: &nbsp; </h3>
+            <% if(hasCombo) {%>
+            <div class="input-field>"> <input type="number" name="cash" id="cash"  min="<%= totalDiscounted %>" required></td>  </div>
+            <input type="hidden" value="<%- total %>" name="total">
+            <% } else{%>
+              <div class="input-field>"> <input type="number" name="cash" id="cash"  min="<%= total %>" required></td>  </div>
+            <input type="hidden" value="<%- total %>" name="total">
+            <% } %>
+            <input type="hidden" value="<%- discountPrice %>" name="discountPrice">
+            <input type="hidden" value="<%- comboID %>" name="comboID">
+        </div>
+      <br>
+      <div class ="buttonChoice">
+        <div class ="button"><input type="button" name="cancel" value="Cancel" onclick="window.history.back()" /></div>
+        <div class="submit"><input type="submit" name="save" /><br /></div>
+      </div>
+    </div>
+  
+    </form>
+    <script>
+
+       // const productList = JSON.parse('<%- JSON.stringify(listProduct) %>');
+       // const hasCombo = JSON.parse('<%- JSON.stringify(hasCombo) %>');
+       // const discountPrice = JSON.parse('<%- JSON.stringify(discountPrice[discountPrice.length - 1]) %>');
+       // const totalDiscounted = JSON.parse('<%- JSON.stringify(totalDiscounted) %>');
+       // const priceList = JSON.parse('<%- JSON.stringify(listPrice) %>');
+       // const quantityList = JSON.parse('<%- JSON.stringify(listQuantity) %>');
+       // const total = JSON.parse('<%- JSON.stringify(total[total.length - 1]) %>');
+
+        //console.log("COMBO???", hasCombo);
+        //if (hasCombo) {
+          //alert('Combo Achieved! Discount is applied');
+            //total = totalDiscounted;
+       // }else{
+         // alert('No Combo!');
+        //}
+        
+    </script>
+</body>
+</html>

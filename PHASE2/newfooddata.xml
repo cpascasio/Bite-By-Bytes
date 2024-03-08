@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product>
+  <food>
+    <foodCode>15</foodCode>
+    <name>Pizza</name>
+    <category>M</category>
+    <price>460</price>
+    <imageID>9</imageID>
+  </food>
+</product>

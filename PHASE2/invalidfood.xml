@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product>
+  <food>
+    <foodCode>1</foodCode>
+    <name>Macaroni</name>
+    <category>M</category>
+    <price>900</price>
+    <imageID>1</imageID>
+  </food>
+</product>

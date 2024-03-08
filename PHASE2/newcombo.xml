@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package>
+  <combos>
+    <comboID>100</comboID>
+    <name>HELLO</name>
+    <mainCode>2</mainCode>
+    <sideCode>6</sideCode>
+    <drinkCode>8</drinkCode>
+    <comboPrice>387</comboPrice>
+  </combos>
+  <combos>
+    <comboID>2</comboID>
+    <name>Steak Veg Beer Combo</name>
+    <mainCode>1</mainCode>
+    <sideCode>6</sideCode>
+    <drinkCode>8</drinkCode>
+    <comboPrice>909</comboPrice>
+  </combos>
+</package>

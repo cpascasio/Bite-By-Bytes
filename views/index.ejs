@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bite-By-Bytes </title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <form method="post" action="/payment">
+    <div class="container">
+        <header>
+                <img class="logo" src="logo.svg" alt="logo" height="80">
+                <h1 style="color: white; text-align: center;"> &nbsp; Bite-By-Bytes </h1>
+        </header>
+        <div class="list"></div>
+    </div>
+    <div class="card">
+        
+            <h1 class="myCart"> My Cart </h1> 
+            <div class ="cart"> 
+                <span class="quantity" style="color: white;"> 0 </span>
+        
+    </div>
+        <ul class="listCard"></ul>
+        <div class="checkOut">
+            <div class="total"> ₱ 0.00 </div>
+            <div class="checkOutBtn">
+                <input type="submit" name="checkout" value="Checkout" onclick="return validateQuantity()">
+            </div>
+        </div>
+    </div>
+    <script>
+        var foodData = JSON.stringify(foodData);
+    </script>
+    <script src="app.js"></script>
+    <script>
+        function validateQuantity() {
+            const quantity = parseInt(document.querySelector('.quantity').textContent);
+            if (quantity > 0) {
+                return true; // Proceed with form submission
+            } else {
+                alert("Cart is empty! Add item/s before proceeding to checkout.");
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+</form>
+</body>
+</html>
